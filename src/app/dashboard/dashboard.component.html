@@ -1,0 +1,88 @@
+<div class="url-help-text-wrap">
+  <span class="url-help-arrow">➚&nbsp;</span><span class="url-help-text">This is a permament link for your monitoring. Save it somewhere to be able to return to this page.</span>
+</div>
+<div class="content">
+
+  <div *ngIf="transactions == undefined">
+    <div class="alarm-banner m-top-48">
+      <img src="assets/icon_attention.svg">
+      <h3>Looks like this address is bad, or no transactions yet.<br>Try another one</h3>
+    </div>
+  </div>
+  <div *ngIf="transactions != undefined && transactions.length == 0">
+    <div class="alarm-banner m-top-48">
+      <img src="assets/icon_attention.svg">
+      <h3>No transactions for this address yet!<br>Wait for it.</h3>
+    </div>
+  </div>
+  <div *ngIf="transactions != undefined && transactions.length > 0">
+    <div class="dashboard-layout">
+      <div class="left-block">
+        <div class="description">
+          <div class="header">
+            <span (click)="onTaxcryClick()" class="taxcry m-right-16">Binance Parser</span>
+
+          </div>
+          <div class="body">
+            Binance Parser tracks your crypto transactions.<br>
+            It checks Ethereum once in 60s and write them in memory storage.<br>
+            Binance, if you see it, hope you like it 😉<br>
+            That is  <a (click)="onGoToTaxLossArticle()">me<mat-icon>open_in_new</mat-icon></a>.<br>
+          </div>
+        </div>
+
+        <div class="user-data-with-controls">
+          <div class="user-data">
+            <div class="status-block m-top-16">
+              <div>
+                <div class="item"><b>Wallet Address:</b> {{currendAddress}}</div>
+                <div class="item"><b>Status:</b> <span style="color: red"> tracking every second</span></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <div class="dashboard">
+        <div>
+          <div>
+            <div class="row-space-between">
+              <div class="spoiler">Your latest transaction</div>
+            </div>
+            <div *ngFor="let transaction of transactions; let i = index">
+              <tcr-transaction-item-component [transaction]="transaction"
+                                              [currentAddress]="currendAddress"
+                                              class="data-elem"></tcr-transaction-item-component>
+            </div>
+
+
+          </div>
+<!--          <div>-->
+<!--            <div class="alarm-banner">-->
+<!--              <img src="assets/loading.gif">-->
+<!--              <h3>Loading transactions...</h3>-->
+<!--            </div>-->
+<!--          </div>-->
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+<!--  <div *ngIf="!user?.amixr_url">-->
+<!--    <div class="amixr-banner">-->
+<!--      <div class="text-container">-->
+<!--        <div class="text">-->
+<!--          Thinking about using Curler for multiple web sites, receiving alerts in Slack or SMS? Integrate it with Amixr incident management platform.-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="add-to-slack">-->
+<!--        <a target="_blank" href="https://slack.com/oauth/authorize?client_id=462299288182.460186953776&amp;scope=bot,chat:write:bot,users.profile:read,users:read"><img alt="Add to Slack" height="40" width="139" src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x, https://platform.slack-edge.com/img/add_to_slack@2x.png 2x"></a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+</div>

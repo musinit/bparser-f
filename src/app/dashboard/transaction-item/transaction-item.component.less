@@ -1,0 +1,142 @@
+.row {
+  display: flex;
+  width: 100%;
+  border: 0.5px grey solid;
+  border-radius: 8px;
+  margin-top: 8px;
+  background-color: white;
+}
+
+.half-opacity {
+  opacity: 0.5;
+}
+
+.element {
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  padding: 6px;
+  justify-content: center;
+  min-width: 25%;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  .value {
+    font-size: 18px;
+  }
+
+  .txvalue {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+  }
+
+  .token {
+    font-size: 18px;
+  }
+
+  .token-small {
+    font-size: 12px !important;
+    flex-wrap: wrap;
+  }
+}
+
+.control {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.control-2 {
+  width: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.analyse {
+  width: 100%;
+  background-color: #F0F0F0;
+  border-top-right-radius: inherit;
+  border-bottom-right-radius: inherit;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 30px;
+  }
+}
+
+.info-container {
+  position: relative;
+
+  .info {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    z-index: 1;
+    left: -24px;
+    top: 5px;
+    cursor: pointer;
+  }
+
+  .info:hover {
+    transform: scale(1.1);
+  }
+
+  .info-layout {
+    position: absolute;
+    padding: 8px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    left: -225px;
+    top: 19px;
+    z-index: 5;
+    background: white;
+    border-radius: 8px;
+
+    .info-element {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: 4px;
+
+      div:first-child {
+        font-size: 9px;
+        color: grey;
+      }
+      div:last-child{
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+
+@media only screen and (min-width: 960px) {
+  .is-hovered {
+    min-height: 70px;
+    transition: min-height 0.5ms ease;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .row {
+    flex-direction: column;
+
+    .types {
+      width: 100%;
+    }
+
+    .setup {
+      width: inherit;
+    }
+  }
+}
+
+.default {
+  background-color: #d9d9d9;
+}

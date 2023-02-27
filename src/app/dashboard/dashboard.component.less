@@ -1,0 +1,771 @@
+
+.url-help-text-wrap {
+  font-family:'PT Mono', monospace;
+  color: black;
+  margin: 4px 10px 10px;
+  text-align: center;
+  line-height: 1.1;
+}
+
+.url-help-arrow {
+  font-size: 20px;
+}
+
+.url-help-text {
+  font-size: 14px;
+  opacity: 0.5;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2%;
+  font-family: 'PTRootUIWebMedium', PTRootUIWebRegular, monospace;
+
+  .dashboard-layout {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    justify-content: center;
+    padding: 40px;
+
+    .left-block {
+      color: black;
+      max-width: 450px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      font-family:'PT Mono', monospace;
+
+      .description {
+        .header {
+          font-size: 32px;
+
+          .taxcry {
+            cursor: pointer;
+          }
+
+          .sub-header {
+            font-size: 14px;
+            cursor: pointer;
+            border-bottom: 1.5px dotted;
+          }
+
+          .info-container {
+            position: relative;
+
+            .beta {
+              cursor: pointer;
+              width: 50px;
+              font-size: 14px;
+              border-bottom: 1.5px dotted;
+            }
+
+            .info {
+              position: absolute;
+              width: 29px;
+              height: 16px;
+              z-index: 1;
+              left: -16px;
+              top: -10px;
+              cursor: pointer;
+              font-size: 12px;
+              border-bottom: 1.5px dotted;
+            }
+
+            .info:hover {
+              transform: scale(1.1);
+            }
+
+            .info-layout {
+              position: absolute;
+              padding: 8px;
+              width: 400px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              left: 13px;
+              top: 36px;
+              z-index: 5;
+              background: white;
+              border-radius: 8px;
+              color: black;
+              font-size: 14px;
+              border: 0.5px solid grey;
+
+              .info-element {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-top: 4px;
+
+                div:first-child {
+                  font-size: 9px;
+                  color: grey;
+                }
+                div:last-child{
+                  font-size: 12px;
+                }
+              }
+
+              .tokens {
+                display: flex;
+                justify-items: flex-start;
+                flex-wrap: wrap;
+
+                div {
+                  margin-top: 8px;
+                }
+
+                img {
+                  width: 20px;
+                  margin-left: 4px;
+                }
+              }
+            }
+          }
+
+        }
+
+        .body {
+          margin-top: 13px;
+          font-size: 14px;
+          line-height: 1.71;
+          letter-spacing: normal;
+
+          a {
+            color: black;
+            text-decoration-line: underline;
+            cursor: pointer;
+
+            .material-icons {
+              font-size: 15px;
+            }
+          }
+        }
+
+      }
+
+      .user-data-with-controls {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: space-between;
+
+        .user-data {
+          margin-top: 12px;
+          font-size: 14px;
+          font-family: 'PTRootUIWebMedium', PTRootUIWebRegular, monospace;
+
+          .status-block {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+
+            .controls {
+              padding-top: 12px;
+            }
+          }
+
+          .analyse-block {
+            margin-top: 24px;
+            .status-block{}
+          }
+
+          .item {
+            margin-top: 4px;
+          }
+
+          .stopped {
+            color: #eb5757
+          }
+
+          .registration-warning {
+            display: flex;
+            align-items: center;
+            align-content: center;
+            opacity: 0.8;
+            border-radius: 5px;
+            background-color: #eb5757;
+            margin-top: 16px;
+            margin-bottom: 12px;
+            padding: 12px 16px 16px;
+
+            .icon {
+              opacity: 0.8;
+              margin-right: 8px;
+            }
+
+
+          }
+        }
+
+        .controls {
+          display: flex;
+          align-items: center;
+
+          .slack-button {
+            margin-left: 12px;
+            cursor: pointer;
+          }
+        }
+      }
+
+    }
+
+    .dashboard {
+      display: flex;
+      flex-direction: column;
+      max-width: 700px;
+      width: 100%;
+      height: 450px;
+      margin-left: 84px;
+
+      .header-with-data {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+
+        .row-data-items {
+          display: flex;
+          justify-content: center;
+          align-items: flex-end;
+          margin-left: 10px;
+          margin-right: 10px;
+          margin-bottom: 20px;
+
+          .y-layout {
+            display: flex;
+            max-width: 30px;
+            height: 80px;
+
+            .numbers {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-between;
+              font-size: 8px;
+              font-family: 'Roboto Mono', monospace;
+              color: grey;
+              margin-right: 2px;
+            }
+
+            .line {
+              width: 1px;
+              height: 100%;
+              color: grey;
+              border-right: 1px solid grey;
+              margin-right: 1px;
+            }
+          }
+        }
+
+        .header {
+          text-align: center;
+          font-family: 'Roboto Mono', monospace;
+          font-size: 16px;
+          color: black;
+          margin: 24px 20px 20px;
+
+          .switcher-layout {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            min-width: 100px;
+            height: auto;
+
+            .date-switcher {
+              display: flex;
+              align-items: center;
+              min-width: 200px;
+
+              .current-date {
+                font-size: 14px;
+                font-weight: bold;
+              }
+
+              .switcher-arrow {
+                margin-left: 8px;
+                margin-right: 8px;
+
+                img {
+                  width: 15px;
+                  height: 30px;
+                  border-radius: 5px;
+                  cursor: pointer;
+
+                  &:hover {
+                    background-color: lightgrey;
+                    transition: background-color 0.3s ease;
+                  }
+                }
+              }
+
+
+            }
+
+            .label-link {
+              color: #8b90a0;
+              font-size: 12px;
+              margin-left: 10px;
+              border-bottom: 1px dotted;
+              padding-inline-start: 0px;
+              padding-inline-end: 0px;
+              height: 20px;
+              cursor: pointer;
+            }
+
+            .label {
+              color: #8b90a0;
+              font-size: 12px;
+              margin-left: 10px;
+              padding-inline-start: 0px;
+              padding-inline-end: 0px;
+              height: auto;
+            }
+
+            .value-text {
+              .label;
+              border-bottom: none;
+              color: black;
+              text-align: left;
+            }
+
+            .value {
+              min-width: 100px;
+              font-size: 12px;
+            }
+
+            .active-status-block {
+              display: flex;
+              margin-top: 8px;
+              margin-bottom: 8px;
+
+              .status-icon {
+                display: flex;
+
+
+                .is-ok-status {
+                  width: 15px;
+                  height: 15px;
+                  min-width: 15px;
+                  min-height: 15px;
+                  border-radius: 15px;
+                  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+                  background-color: #6fcf97;
+                  margin-left: 8px;
+                }
+
+                .is-notok-status {
+                  width: 15px;
+                  height: 15px;
+                  min-width: 15px;
+                  min-height: 15px;
+                  border-radius: 15px;
+                  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.25);
+                  margin-left: 8px;
+                  background-color: #eb5757;;
+                }
+
+                img {
+                  width: 20px;
+                  margin-left: 4px;
+                }
+              }
+            }
+
+            .statistic-block {
+              display: flex;
+              margin-top: 8px;
+              margin-bottom: 8px;
+            }
+
+          }
+        }
+
+        .data-layout {
+          display: flex;
+          flex-direction: row;
+          width: 3.9%;
+          overflow-y: scroll;
+        }
+
+        .data-elem {
+          width: 100%;
+        }
+
+      }
+
+      .tax-methods {
+        display: flex;
+
+        h3 {
+          color: black;
+          cursor: pointer;
+          opacity: 0.3;
+        }
+      }
+
+      .spoiler {
+        color: black;
+        max-width: 250px;
+        font-size: 13px;
+        font-style: italic;
+      }
+
+      .analytic {
+        background-color: #434FA5;
+        //height: 150px;
+        border-radius: 10px;
+        padding: 20px;
+        color: black;
+
+        .cgl {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+
+
+          .cgl-value {
+            font-size: 20px;
+          }
+
+          div:last-child {
+            font-size: 12px;
+          }
+        }
+
+        .green {
+          color: #1EF35A;
+        }
+
+        .red {
+          color: #FF9F9F;
+          text-decoration-line: line-through;
+        }
+
+        .countries {
+          div:first-child {
+            opacity: 1;
+            cursor: pointer;
+          }
+        }
+
+        .country {
+          display: flex;
+          opacity: .4;
+          padding: 4px;
+          img {
+            width: 30px;
+          }
+        }
+
+        .selected-country {
+          border: 0.5px solid white;
+          border-radius: 4px;
+        }
+
+
+
+      }
+
+      .no-data-stub {
+        display: flex;
+        color: #d9d9d9;
+        margin-top: 40px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        img {
+          width: 80px;
+        }
+      }
+
+      .no-data-icon {
+        display: block;
+        margin: 0 auto;
+        width: 44px;
+        opacity: 0.1;
+        margin-top: 10px;
+      }
+
+      .is-ok-label {
+        color: green;
+      }
+
+      .is-not-ok-label {
+        color: darkred;
+      }
+
+      .transaction-layout {
+        height: 500px;
+        overflow-y: scroll;
+      }
+
+      .tax-area {
+        background-color: #434FA5;
+        padding: 5px;
+        border-radius: 10px;
+        color: black;
+        margin-bottom: 12px;
+      }
+    }
+
+    .d-buttons {
+      display: flex;
+      width: 100%;
+
+      div:first-child {
+        margin-right: 8px;
+      }
+
+      mat-icon {
+        cursor: pointer;
+      }
+    }
+
+    .full-opacity {
+      opacity: 1 !important;
+    }
+
+    /* ----------- iPad Pro ----------- */
+    /* Portrait */
+    @media only screen
+      and (min-width: 768px)
+      and (max-height: 1366px)
+      and (orientation: portrait)
+      and (-webkit-min-device-pixel-ratio: 1.5) {
+        flex-direction: column;
+        align-items: center;
+
+        .left-block {
+          max-width: 70%;
+          width: 70%;
+        }
+
+        .dashboard {
+          max-width: 70%;
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 60px;
+        }
+
+    }
+
+    @media (max-width: 960px) {
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0;
+      padding: 20px;
+
+      .dashboard {
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 32px;
+        // TODO ASK MASHA how to make better
+        height: 350px;
+
+        .header-with-data {
+
+          .row-data-items {
+            flex-wrap: wrap;
+          }
+
+          .data-layout {
+            width: 8%;
+            margin-bottom: 10px;
+          }
+
+        }
+      }
+
+      .info-layout {
+        left: -149px !important;
+        width: 300px !important;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      align-items: center;
+      width: 100%;
+
+      .dashboard {
+        margin-left: 0px;
+        height: auto;
+      }
+
+      .left-block {
+        color: black;
+        max-width: 480px;
+
+        .description {
+          .header {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 34px;
+
+            .sub-header {
+              font-size: 14px;
+            }
+          }
+
+          .body {
+            margin-top: 24px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 16px;
+            line-height: 1.71;
+            letter-spacing: normal;
+          }
+        }
+
+        .user-data-with-controls {
+          display: flex;
+          flex-direction: column;
+
+          .user-data {
+            margin-top: 12px;
+            font-size: 14px;
+            font-family: 'Roboto Mono', monospace;
+
+            .item {
+              // margin-top: 24px;
+            }
+          }
+
+          .controls {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+          }
+        }
+
+      }
+
+      .right-block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 330px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 24px;
+        background-color: black;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+
+        .header {
+          font-family: 'Roboto Mono', monospace;
+          font-size: 25px;
+          color: black;
+        }
+
+        .ping-item {
+          font-size: 20px;
+        }
+
+        .no-data-stub {
+          color: grey;
+        }
+
+        .is-ok-label {
+          color: green;
+        }
+
+        .is-not-ok-label {
+          color: darkred;
+        }
+      }
+
+      .d-buttons {
+        flex-direction: column;
+
+        div:last-child {
+          margin-left: 0 !important;
+        }
+      }
+
+      .item {
+        font-size: 10px;
+      }
+    }
+  }
+
+  .amixr-banner {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+    background-color: #4D52B2;
+    border-radius: 5px;
+    padding: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    .text-container {
+      text-align: center;
+      flex-grow: 1;
+      display: flex;
+      justify-content: left;
+      align-items: center;
+    }
+
+    .text {
+      text-align: left;
+      font-family: 'Roboto Mono', monospace;
+    }
+
+    .add-to-slack {
+      text-align: center;
+      margin-left: auto;
+      justify-content: center;
+    }
+  }
+
+  .alarm-banner {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    color: white;
+    text-align: center;
+
+    img {
+      width: 100px;
+      border-radius: 50%;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .amixr-banner {
+      display: flex;
+      flex-direction: column;
+      margin-left: 1rem;
+      margin-right: 1rem;
+
+      .text {
+        text-align: center;
+      }
+    }
+
+    .add-to-slack {
+      margin-top: 2rem;
+      margin-right: auto;
+    }
+  }
+
+}

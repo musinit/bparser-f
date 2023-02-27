@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "styles_text.css";
+@import "styles_dimensions.less";
+@import "styles_fonts.less";
+
+body {
+  background-color: #FCD535;
+}
+
+.cookiealert-content {
+  width: 100%;
+
+  @media (max-width: 960px) {
+    width: 70%;
+  }
+}
+
+.row-space-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.row-start {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  color: white;
+}
+
+
+@media (max-width: 480px) {
+  .row-space-between {
+    flex-direction: column;
+  }
+}

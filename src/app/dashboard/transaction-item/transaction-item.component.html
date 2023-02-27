@@ -1,0 +1,48 @@
+<div *ngIf="transaction">
+  <div class="row">
+    <div class="element m-left-8">
+      <div class="txvalue">
+        <div><span style="color: grey">Value: </span> {{transaction?.value}}</div>
+      </div>
+    </div>
+    <div class="analyse">
+      <div class="m-right-32"><span style="color: grey">Block number:</span> {{transaction?.blockNumber}}</div>
+      <img *ngIf="transaction?.from == this.currentAddress" src="assets/arrow_forward.png"/>
+      <img *ngIf="transaction?.to == this.currentAddress" src="assets/arrow_back.png"/>
+    </div>
+
+    <div class="info-container">
+      <img class="info" (mouseenter) ="onShowInfo(true)"  (mouseleave) ="onShowInfo(false)" src="assets/info.png" alt="info">
+
+      <div *ngIf="isInfoVisible" class="info-layout">
+        <div class="info-element">
+          <div>Block Hash</div>
+          <div>{{blockHash}}</div>
+        </div>
+        <div class="info-element">
+          <div>Block Number</div>
+          <div>{{transaction?.blockNumber}}</div>
+        </div>
+        <div class="info-element">
+          <div>Transaction Index</div>
+          <div>{{transaction?.transactionIndex|| '-'}}</div>
+        </div>
+        <div class="info-element">
+          <div>Tx Gas Used</div>
+          <div>{{transaction?.gasUsed|| '-'}}</div>
+        </div>
+        <div class="info-element">
+          <div>Tx Gas Limit</div>
+          <div>{{transaction?.gasLimit|| '-'}}</div>
+        </div>
+        <div class="info-element">
+          <div>Nonce</div>
+          <div>{{transaction?.nonce|| '-'}}</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,50 @@
+<div class="content">
+  <div class="left-block">
+    <div class="header">
+      Binance Parser
+    </div>
+    <div class="body">
+      Have you ever done a Binance parser interview task? I did, and that's how it works.
+      <br>
+      <br>
+      ⏰ This parser check once in a second all your blockchain transactions.<br>
+      👍 It is free and works as easy as possible.<br>
+      ❗ Careful! It doesn't have persistent storage, so your data is not safe.<br>
+        🏓 Since last restart <strong style="color: red">{{numOfTransactions}}</strong> transactions were processed (latest block <strong style="color: red">{{latestBlockNum}}</strong>)
+      <br>
+    </div>
+  </div>
+
+  <div class="right-block">
+    <div class="header">Query and parse your crypto transactions</div>
+    <div class="curler-form" [formGroup]="curlerForm">
+      <mat-form-field class="input-field">
+        <input matInput placeholder="Ethereum Wallet Address" formControlName="addrs">
+      </mat-form-field>
+<!--      <mat-form-field class="input-field">-->
+<!--        <input matInput placeholder="Email" formControlName="email" (keydown.enter)="createUser()">-->
+<!--      </mat-form-field>-->
+<!--      <mat-form-field appearance="fill">-->
+<!--        <mat-label>Country</mat-label>-->
+<!--        <mat-select>-->
+<!--          <mat-option *ngFor="let country of countries" [value]="country.value">-->
+<!--            {{country.flag}} {{country.viewValue}}-->
+<!--          </mat-option>-->
+<!--        </mat-select>-->
+<!--      </mat-form-field>-->
+<!--      <mat-form-field appearance="fill">-->
+<!--        <mat-label>Currency</mat-label>-->
+<!--        <mat-select>-->
+<!--          <mat-option *ngFor="let currency of currencies" [value]="currency.value">-->
+<!--            {{currency.flag}} {{currency.viewValue}}-->
+<!--          </mat-option>-->
+<!--        </mat-select>-->
+<!--      </mat-form-field>-->
+
+
+      <button mat-flat-button color="primary" (click)="subscribe()">Start now</button>
+    </div>
+    <div class="demo m-top-16" (click)="onDemo()">Check demo address</div>
+    <a class="policy-link" href="/policy" target="_self">Privacy Policy</a>
+  </div>
+</div>
