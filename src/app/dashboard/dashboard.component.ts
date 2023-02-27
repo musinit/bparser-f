@@ -51,10 +51,9 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.updateAllTransactions(address);
   }
 
-  onGoToTaxLossArticle() {
-    window.open('https://github.com/musinit', '_blank');
+  onGoTo(url) {
+    window.open(url, '_blank');
   }
-
 
   private updateAllTransactions(address: string) {
     this.parserService.getTransactions(address).pipe(first()).subscribe(results => {
