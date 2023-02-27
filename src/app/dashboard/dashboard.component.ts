@@ -1,7 +1,6 @@
 import {AfterViewInit, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {ParserService} from '../services/parser.service';
-import {MatDialog} from '@angular/material';
 import {first, map} from 'rxjs/internal/operators';
 import {Transaction} from '../models/transaction';
 
@@ -43,7 +42,7 @@ export class DashboardComponent implements OnInit, AfterViewInit {
     this.updateDashboardData(this.currendAddress);
   }
 
-  onTaxcryClick() {
+  onLogoClick() {
     this.router.navigate(['/']);
   }
 

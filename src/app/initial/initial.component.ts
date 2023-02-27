@@ -54,7 +54,7 @@ export class InitialComponent implements OnInit, OnDestroy {
   }
 
   onDemo() {
-    window.open(`http://localhost:4200/dashboard/0x76f36d497b51e48a288f03b4c1d7461e92247d5e`, '_self');
+    window.open(`https://bparser.verdandi.uno/dashboard/0x76f36d497b51e48a288f03b4c1d7461e92247d5e`, '_self');
   }
 
   ngOnDestroy() {
